@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+
+      .email-container {
+        width: 579px;
+        margin: 50px auto;
+        background-color: #ffffff;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 219px;
+        padding: 0;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #222;
+        margin-bottom: 10px;
+      }
+
+      .message {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: #FF69B4;
+        color: #ffff !important;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 5px;
+      }
+
+      .cta-button:hover {
+        background-color: #FF1493;
+      }
+
+      .footer {
+        font-size: 14px;
+        color: #777;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="email-container">
+    <img src="https://app.pinkcollar.live/assets/PinkCollarLogo-C0wxdE7C.png"  alt="Pink Collar Logo" class="logo">
+    <h2 class="title">Welcome to the Pink Collar</h2>
+    <p class="message">
+      Hello, 
+      You have been invited to join the Admin Panel. Click the button below to accept the invitation and set up your account:
+    </p>
+
+    <%= link_to 'Accept Invitation', @url, class: 'cta-button' %>
+
+    <p>Or copy and paste this link into your browser:</p>
+    <p><%= @url %></p>
+    
+    <p>Please note that this invitation link will expire in 24 hours for security reasons.</p>
+    
+    <p>If you did not expect to receive this invitation, please ignore this email.</p>
+    
+    <p>Best regards,<br>
+    <p>The Pink Collar Team</p>
+  </div>
+
+</body>
+</html> 
